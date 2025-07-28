@@ -5,44 +5,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ned Caffarra - Digital Resume</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    function toggleSection(btn) {
+      const content = btn.nextElementSibling;
+      if (content.style.display === "none") {
+        content.style.display = "block";
+        btn.textContent = "▼ " + btn.textContent.slice(2);
+      } else {
+        content.style.display = "none";
+        btn.textContent = "▶ " + btn.textContent.slice(2);
+      }
+    }
+  
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".content").forEach(c => c.style.display = "none");
+    });
+  </script>
 </head>
+
+<canvas id="matrix-left"></canvas>
+<canvas id="matrix-right"></canvas>
+<script src="matrix-rain.js"></script>
+
 <body>
   <div class="container">
     <h1 class="glow">Ned Caffarra</h1>
     <p class="tagline">Mechanical Engineer | Problem Solver | Code Tinkerer</p>
     <p><a class="resume-link" href="resume.pdf" target="_blank">📄 View Resume (PDF)</a></p>
 
-    <section>
-      <h2>Current Employment</h2>
+  <div class="section">
+    <button class="toggle-btn" onclick="toggleSection(this)">▶ Current Employment</button>
+    <div class="content">
       <p><strong>MJC Inc.</strong> – Product Engineer<br>
       Designing HVAC components, UL certification, SolidWorks automation, cost savings analysis.</p>
-    </section>
+    </div>
+  </div>
 
-    <section>
-      <h2>Past Employment</h2>
-      <ul>
-        <li><strong>U.S. Navy</strong> – Systems Officer & Project Leader</li>
-        <li><strong>XYZ Engineering</strong> – Mechanical Intern</li>
-      </ul>
-    </section>
+    <div class="section">
+      <button class="toggle-btn" onclick="toggleSection(this)">▶ Past Employment</button>
+      <div class="content">
+        <ul>
+          <li><strong>U.S. Navy</strong> – Systems Officer & Project Leader</li>
+          <li><strong>XYZ Engineering</strong> – Mechanical Intern</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="section">
+      <button class="toggle-btn" onclick="toggleSection(this)">▶ Complete Projects</button>
+      <div class="content">
+        <ul>
+          <li>Excel-based Heater Bypass Calculator</li>
+          <li>SolidWorks VBA Export Tools for Drawings</li>
+          <li>Music Royalty Breakdown Tool (Python)</li>
+        </ul>
+      </div>
+    </div>
 
-    <section>
-      <h2>Complete Projects</h2>
-      <ul>
-        <li>Excel-based Heater Bypass Calculator</li>
-        <li>SolidWorks VBA Export Tools for Drawings</li>
-        <li>Music Royalty Breakdown Tool (Python)</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Current Projects</h2>
-      <ul>
-        <li>Python Time Study App for Manufacturing</li>
-        <li>AlphaDex – Free Pokémon Team Builder App</li>
-        <li>React + Python Music Library Platform</li>
-      </ul>
-    </section>
+    <div class="section">
+      <button class="toggle-btn" onclick="toggleSection(this)">▶ Current Projects</button>
+      <div class="content">
+        <ul>
+          <li>Python Time Study App for Manufacturing</li>
+          <li>AlphaDex – Free Pokémon Team Builder App</li>
+          <li>React + Python Music Library Platform</li>
+        </ul>
+      </div>
+    </div>
 
     <footer>
       <p>Contact: <a href="mailto:nedcaffarra@yahoo.com">nedcaffarra@yahoo.com</a> | <a href="https://github.com/nedcaffarra" target="_blank">GitHub</a></p>
