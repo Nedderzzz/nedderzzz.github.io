@@ -1,3 +1,4 @@
+/* === Base Style === */
 body {
   margin: 0;
   padding: 0;
@@ -5,16 +6,42 @@ body {
   color: #00ff00;
   font-family: 'Courier New', monospace;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
+/* === Layout Wrapper === */
+.page-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* === Side Ribbons === */
+canvas#matrix-left,
+canvas#matrix-right {
+  height: 100vh;
+  width: 10vw;
+  pointer-events: none;
+  z-index: 0;
+}
+
+canvas#matrix-left {
+  order: 1;
+}
+
+canvas#matrix-right {
+  order: 3;
+}
+
+/* === Main Content === */
 .container {
-  max-width: 1000px;    /* Increased from 800px */
-  margin: 0 auto;
+  order: 2;
+  width: 80vw;
   padding: 40px 20px;
-  position: relative;
-  z-index: 1; /* make sure it's above the matrix rain */
+  z-index: 1;
 }
-
 
 h1, h2 {
   border-bottom: 1px solid #00ff00;
@@ -72,12 +99,19 @@ footer {
   color: #00cc00;
 }
 
+/* === Section Styling === */
 .section {
   border: 2px solid #00ff00;
   padding: 10px 15px;
   margin-bottom: 20px;
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
+}
+
+.always-visible h2 {
+  border-bottom: 1px solid #00ff00;
+  padding-bottom: 5px;
+  margin-top: 40px;
 }
 
 .content {
@@ -98,26 +132,7 @@ footer {
   color: #00cc00;
 }
 
-/* === Matrix Rain Side Ribbons === */
-canvas#matrix-left,
-canvas#matrix-right {
-  position: fixed;
-  top: 0;
-  width: 150px;  /* Wider ribbons */
-  height: 100%;
-  z-index: 0;
-  pointer-events: none;
-}
-
-canvas#matrix-left {
-  left: 0;
-}
-
-canvas#matrix-right {
-  right: 0;
-}
-
-/* Indent all subsections under collapsible parents */
+/* === Subsections Indented === */
 .subsection {
   border: 1px dashed #00ff00;
   margin: 10px 0 15px 20px;  /* Indent from parent */
@@ -126,3 +141,20 @@ canvas#matrix-right {
   border-radius: 4px;
 }
 
+/* === Mobile-Friendly Layout === */
+@media screen and (max-width: 768px) {
+  .page-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  canvas#matrix-left,
+  canvas#matrix-right {
+    display: none;
+  }
+
+  .container {
+    width: 95vw;
+    padding: 20px 15px;
+  }
+}
