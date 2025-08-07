@@ -29,53 +29,128 @@
 
 <body>
   <div class="container">
-    <h1 class="glow">Ned Caffarra</h1>
-    <p class="tagline">Leader | Engineer | Problem Solver | Code Tinkerer</p>
-    <p><a class="resume-link" href="Ned%20Caffarra%20Resume%202025%20Rev1.pdf" target="_blank" download>📄 View Resume (PDF)</a></p>
-
-  <div class="section">
-    <button class="toggle-btn" onclick="toggleSection(this)">▶ Current Employment</button>
-    <div class="content">
-      <p><strong>MJC Inc.</strong> – Product Engineer<br>
-      Designing HVAC components, UL certification, SolidWorks automation, cost savings analysis.</p>
+  <h1 class="glow">Ned Caffarra</h1>
+  <p class="tagline">Leader | Engineer | Problem Solver | Code Tinkerer</p>
+  <p><a class="resume-link" href="Ned%20Caffarra%20Resume%202025%20Rev2.pdf" target="_blank" download>📄 Download Resume</a></p>
+  
+    <!-- SUMMARY -->
+    <div class="section">
+      <button class="toggle-btn" onclick="toggleSection(this)">▶ Summary</button>
+      <div class="content">
+        <p>Dynamic leader with 8+ years of combined military and engineering experience. Proven success in product design, New Product Introduction (NPI), Continuous Product Improvement (CPI), and collaborative manufacturing process development. Skilled communicator and hands-on problem solver across cross-functional teams.</p>
+      </div>
     </div>
-  </div>
-
+  
+    <!-- CURRENT EMPLOYMENT -->
+    <div class="section">
+      <button class="toggle-btn" onclick="toggleSection(this)">▶ Current Employment</button>
+      <div class="content">
+        <h3>MJC Inc. – Product Engineer (2022–Present)</h3>
+        <p>Leads NPI and CPI projects for HVAC systems, managing design and certification processes while optimizing cost and manufacturability.</p>
+        <ul>
+          <li>Designed evaporator coils, filter racks, and jigs/templates to streamline production</li>
+          <li>Managed UL certification, A2L refrigerant conversion, and factory redesign</li>
+          <li>Used SolidWorks, AutoCAD, and FEA to validate and optimize designs</li>
+        </ul>
+      </div>
+    </div>
+  
+    <!-- SOFT SKILLS -->
+    <div class="section">
+      <button class="toggle-btn" onclick="toggleSection(this)">▶ Soft Skills</button>
+      <div class="content">
+        <ul>
+          <li><strong>Communication:</strong> Clear technical messaging to customers, teams, and suppliers</li>
+          <li><strong>Collaboration:</strong> Cross-functional and external coordination</li>
+          <li><strong>Problem-Solving:</strong> Analytical troubleshooting and solutions</li>
+          <li><strong>Adaptability:</strong> Performs under pressure in evolving environments</li>
+          <li><strong>Leadership:</strong> Develops others while meeting demanding deadlines</li>
+        </ul>
+      </div>
+    </div>
+  
+    <!-- PAST EMPLOYMENT -->
     <div class="section">
       <button class="toggle-btn" onclick="toggleSection(this)">▶ Past Employment</button>
       <div class="content">
-        <ul>
-          <li><strong>U.S. Navy</strong> – Systems Officer & Project Leader</li>
-          <li><strong>XYZ Engineering</strong> – Mechanical Intern</li>
-        </ul>
+  
+        <div class="subsection">
+          <button class="toggle-btn" onclick="toggleSection(this)">▶ U.S. Navy – Division Officer (2016–2022)</button>
+          <div class="content">
+            <p>Led teams of up to 300 sailors in engineering operations and critical missions. Oversaw system maintenance, safety drills, and leadership development in high-pressure environments.</p>
+            <ul>
+              <li>Managed HVAC, refrigeration, and auxiliary systems during deployments</li>
+              <li>Directed ship-wide evolutions including security drills and underway operations</li>
+              <li>Executed lifecycle management, force protection upgrades, and training programs</li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="subsection">
+          <button class="toggle-btn" onclick="toggleSection(this)">▶ Integrated Project Services – Mechanical Co-op (2014)</button>
+          <div class="content">
+            <p>Designed HVAC layouts for pharmaceutical facilities using Revit and AutoCAD. Conducted load calculations and validated performance.</p>
+          </div>
+        </div>
+  
+        <div class="subsection">
+          <button class="toggle-btn" onclick="toggleSection(this)">▶ Roberts Filter Group – Engineering Intern (2013)</button>
+          <div class="content">
+            <p>Designed and fabricated 2D/3D filter layouts in AutoCAD Inventor. Conducted field testing and performance validation of prototypes.</p>
+          </div>
+        </div>
+  
       </div>
     </div>
-    
+  
+    <!-- COMPLETED PROJECTS -->
     <div class="section">
-      <button class="toggle-btn" onclick="toggleSection(this)">▶ Complete Projects</button>
+      <button class="toggle-btn" onclick="toggleSection(this)">▶ Completed Projects</button>
       <div class="content">
-        <ul>
-          <li>Excel-based Heater Bypass Calculator</li>
-          <li>SolidWorks VBA Export Tools for Drawings</li>
-          <li>Music Royalty Breakdown Tool (Python)</li>
-        </ul>
+  
+        <div class="subsection">
+          <button class="toggle-btn" onclick="toggleSection(this)">▶ Time Study App (Python)</button>
+          <div class="content">
+            <p>Custom-built desktop application for tracking work durations, identifying stoppages, logging reasons, and analyzing productivity with exportable charts and logs. Built with Tkinter, SQLite, and Matplotlib.</p>
+          </div>
+        </div>
+  
+        <div class="subsection">
+          <button class="toggle-btn" onclick="toggleSection(this)">▶ Price Dashboard App (Python)</button>
+          <div class="content">
+            <p>Real-time metal price tracking dashboard using public APIs. Built with Tkinter and designed for manufacturing purchasing teams with hourly refresh, scrollable UI, and centralized log storage.</p>
+          </div>
+        </div>
+  
       </div>
     </div>
-
+  
+    <!-- CURRENT PROJECTS -->
     <div class="section">
       <button class="toggle-btn" onclick="toggleSection(this)">▶ Current Projects</button>
       <div class="content">
-        <ul>
-          <li>Python Time Study App for Manufacturing</li>
-          <li>AlphaDex – Free Pokémon Team Builder App</li>
-          <li>React + Python Music Library Platform</li>
-        </ul>
+  
+        <div class="subsection">
+          <button class="toggle-btn" onclick="toggleSection(this)">▶ AlphaDex – Pokémon Team Builder App</button>
+          <div class="content">
+            <p>Free mobile app for iOS and Android featuring a full Pokédex, level-up movesets, TM/egg moves, ability info, and team builder tools with robust filtering. Built with React Native.</p>
+          </div>
+        </div>
+  
+        <div class="subsection">
+          <button class="toggle-btn" onclick="toggleSection(this)">▶ Music Library Platform (React + Python)</button>
+          <div class="content">
+            <p>Web-based app to manage, tag, and stream original and licensed music. Includes royalty breakdowns, creator upload tools, and modern UI built with React frontend and Python backend.</p>
+          </div>
+        </div>
+  
       </div>
     </div>
-
+  
     <footer>
-      <p>Contact: <a href="mailto:nedcaffarra@yahoo.com">nedcaffarra@yahoo.com</a> | <a href="https://github.com/nedcaffarra" target="_blank">GitHub</a></p>
+      <p>Contact: <a href="mailto:nedcaffarra@yahoo.com">nedcaffarra@yahoo.com</a> | <a href="https://github.com/nedderzzz" target="_blank">GitHub</a></p>
     </footer>
   </div>
+
 </body>
 </html>
