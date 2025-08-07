@@ -8,10 +8,13 @@ body {
 }
 
 .container {
-  max-width: 800px;
-  margin: auto;
+  max-width: 1000px;    /* Increased from 800px */
+  margin: 0 auto;
   padding: 40px 20px;
+  position: relative;
+  z-index: 1; /* make sure it's above the matrix rain */
 }
+
 
 h1, h2 {
   border-bottom: 1px solid #00ff00;
@@ -95,3 +98,21 @@ footer {
   color: #00cc00;
 }
 
+/* === Matrix Rain Side Ribbons === */
+canvas#matrix-left,
+canvas#matrix-right {
+  position: fixed;
+  top: 0;
+  width: 150px;  /* Wider ribbons */
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+canvas#matrix-left {
+  left: 0;
+}
+
+canvas#matrix-right {
+  right: 0;
+}
