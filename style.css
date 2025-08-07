@@ -116,3 +116,13 @@ canvas#matrix-left {
 canvas#matrix-right {
   right: 0;
 }
+
+/* Indent all subsections under collapsible parents */
+.subsection {
+  border: 1px dashed #00ff00;
+  margin: 10px 0 15px 20px;  /* Indent from parent */
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
